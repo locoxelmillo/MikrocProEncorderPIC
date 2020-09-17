@@ -47,11 +47,6 @@ error=setpoint-pid_in;
 }
 
 
-
-
-
-
-
 void Interrpciones() iv 0x0004 ics ICS_AUTO
  {
    if (INTF_bit==1)
@@ -99,9 +94,6 @@ Lcd_Init();                        // Initialize LCD
   INTEDG_bit=0; //por flanco de bajada
   INTE_bit=1; //habilita interrpcion por flanco
   GIE_bit=1; //Autoriza interrupciones
-  
-  
-  
 
 
 while (1)
@@ -125,7 +117,6 @@ if (ut<0)    //gira a la derecha     analiza la salida para determinar giro
     m12=1;
 
   }
-
 
 
    PWM1_Set_Duty(ut); //salida pid   po PWM
